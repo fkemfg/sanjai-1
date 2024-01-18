@@ -1,21 +1,50 @@
-BizCardX: Extracting Business Card Data with OCR
-Overview
-BizCardX is a Streamlit web application which extracts data from business cards using Optical Character Recognition (OCR). Users can upload an image of a business card and the application uses the easyOCR library to extract relevant information from the card. The extracted information is then displayed in a user-friendly format and can be stored in a MySQL database for future reference.
+# Industrial-Copper-Modeling-Project
 
-The application allows users to view, modify, or delete the extracted data. It also has a user interface for uploading business card images and a table interface for displaying the extracted data. The application is created by Arshad Ayub Ahmed.
+Application Link: https://tulasinnd-industrial-copper.streamlit.app/
 
-Prerequisites
-To run this application, you'll need:
+Demo Video Link: https://www.linkedin.com/posts/tulasi-n-49b6111b0_python-machinelearning-decisiontrees-activity-7058375260022181888-oCFS?utm_source=share&utm_medium=member_desktop
 
-Python environment (Python 3.x recommended)
-Streamlit, Pandas, easyOCR, PIL, cv2, matplotlib, re, mysql-connector-python libraries installed
-MySQL server setup and running
-Features
-Home: Displays an overview of the app including technologies used and a brief description of the app.
-Upload & Extract: This section allows the user to upload an image of a business card. The application then processes the image and extracts data such as company name, card holder name, designation, mobile number, email, website, area, city, state, pin code, and the image of the card.
-Modify: This section allows users to select an entry from the database using a dropdown menu, which they can then update or delete. The changes are committed to the database.
-How to Run
-Clone the repository or download the python script.
-Run the script using the command line: streamlit run app.py
-The application will open in a new tab of your web browser. You can then navigate through the application, upload images of business cards, and view or modify the extracted data.
-Note: Ensure your MySQL server is running and the database details in the script match your MySQL setup.
+## Introduction
+This project aims to develop two machine learning models for the copper industry to address the challenges of predicting selling price and lead classification. Manual predictions can be time-consuming and may not result in optimal pricing decisions or accurately capture leads. The models will utilize advanced techniques such as data normalization, outlier detection and handling, handling data in the wrong format, identifying the distribution of features, and leveraging tree-based models, specifically the decision tree algorithm, to predict the selling price and leads accurately.
+
+## Regression model details
+The copper industry deals with less complex data related to sales and pricing. However, this data may suffer from issues such as skewness and noisy data, which can affect the accuracy of manual predictions. Dealing with these challenges manually can be time-consuming and may not result in optimal pricing decisions. A machine learning regression model can address these issues by utilizing advanced techniques such as data normalization, outlier detection and handling, handling data in wrong format, identifying the distribution of features, and leveraging tree-based models, specifically the decision tree algorithm.
+
+## Classification model details
+Another area where the copper industry faces challenges is in capturing the leads. A lead classification model is a system for evaluating and classifying leads based on how likely they are to become a customer. You can use the STATUS variable with WON being considered as Success and LOST being considered as Failure and remove data points other than WON, LOST STATUS values.
+
+## Solution
+
+The solution includes the following steps:
+
+Exploring skewness and outliers in the dataset.
+
+Transforming the data into a suitable format and performing any necessary cleaning and pre-processing steps.
+
+Developing a machine learning regression model which predicts the continuous variable 'Selling_Price' using the decision tree regressor.
+
+Developing a machine learning classification model which predicts the Status: WON or LOST using the decision tree classifier.
+
+Creating a Streamlit page where you can insert each column value and get the Selling_Price predicted value or Status (Won/Lost).
+
+## Requirements
+
+This project requires the following libraries to be installed:
+
+NumPy
+
+Pandas
+
+Scikit-learn
+
+Streamlit
+
+## Getting Started
+
+Clone the repository.
+
+Install the required libraries.
+
+Run the Streamlit app using the command: streamlit run app.py.
+
+Enter the values for each column to get the Selling_Price predicted value or Status (Won/Lost).
